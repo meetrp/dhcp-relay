@@ -1,0 +1,6 @@
+/**
+@mainpage DHCP Relay
+
+The idea behind this code is to write a DHCP relay from 1st principles so that it can
+be modifed to suit my other needs while hacking the DHCP protocol.
+*/
