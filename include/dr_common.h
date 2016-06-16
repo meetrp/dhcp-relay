@@ -27,12 +27,12 @@
 /**
  * @file 				dr_common.h
  *
- * @brief 			File contains all the common definitions
+ * @brief 				File contains all the common definitions
  * The error codes, the macros are all defined in this. This file will be included by
  * all the other files to utilize the definitions, the macros, the error codes defined
  * here.
  *
- * @date 			07-Jun-2016
+ * @date 				07-Jun-2016 2:42:21 pm
  * @author			rp (rp@meetrp.com)
  */
 
@@ -52,9 +52,13 @@
  * Every error code used within this entire project will be defined in here.
  */
 typedef enum _dr_err {
-	DR_SUCCESS, 									///< 0
+	DR_SUCCESS, 										///< 0
 
 	DR_GENERIC_FAILURE,						///< 1
+	DR_SOCKET_FAILURE,						///< 2
+	DR_IOCTL_FAILED,								///< 3
+	DR_BIND_FAILED,								///< 4
+	DR_SET_SOCK_OPT_FAILED				///< 5
 } dr_err_t;
 
 #endif /* DR_COMMON_H_ */

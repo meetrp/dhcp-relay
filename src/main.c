@@ -30,9 +30,11 @@
  * @brief 			File contains the main function
  * Only the main function is defined in here.
  *
- * @date 			07-Jun-2016
+ * @date 				07-Jun-2016 2:42:21 pm
  * @author			rp (rp@meetrp.com)
  */
+
+#include <stdio.h>
 
 #include "dr_dhcp_relay.h"
 
@@ -49,5 +51,10 @@ int main(int argc, char* argv[])
 		return dr_start_dhcp_relay("eth0");
 	}
 
-	return dr_start_dhcp_relay(argv[2]);
+	if (argc > 2) {
+		fprintf(stderr, "Ignore all the arguments except the 1st: %s\n",
+			argv[1]);
+	}
+
+	return dr_start_dhcp_relay(argv[1]);
 }
